@@ -1,0 +1,69 @@
+﻿@model DataClassLibrary.Models.UserData
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CustomerId }) |
+    @Html.ActionLink("Go to Home", "Index", "Home") |
+    @Html.ActionLink("View My Orders", "MyOrders", "MyAccount")
+</p>
+
+<fieldset>
+    <legend>Personal Information</legend>
+
+    <div class="display-label">
+        UserId : <b>@Html.DisplayFor(model => model.UserId)</b>
+    </div>
+
+    <div class="display-label">
+        EmailId : <b>@Html.DisplayFor(model => model.EmailId)</b>
+    </div>
+
+    <div class="display-label">
+        Password : <b>@Html.DisplayFor(model => model.Password)</b>
+    </div>
+
+    <div class="display-label">
+        FirstName : <b>@Html.DisplayFor(model => model.FirstName)</b>
+    </div>
+
+    <div class="display-label">
+        LastName : <b>@Html.DisplayFor(model => model.LastName)</b>
+    </div>
+
+    <div class="display-label">
+        Security Question : <b>@Html.DisplayFor(model => model.SecurityQuestion)</b>
+    </div>
+
+    <div class="display-label">
+        Security Answer : <b>@Html.DisplayFor(model => model.SecurityAnswer)</b>
+    </div>
+
+    <div class="display-label">
+        BillingAddress : <b>@Html.DisplayFor(model => model.BillingAddress)</b>
+    </div>
+
+    <div class="display-label">
+        ShippingAddress : <b>@Html.DisplayFor(model => model.ShippingAddress)</b>
+    </div>
+
+    <div class="display-label">
+        CardNumber : <b>@Html.DisplayFor(model => model.CardNumber)</b>
+    </div>
+
+    <div class="display-label">
+        CardType : <b>@Html.DisplayFor(model => model.CardType)</b>
+    </div>
+
+    <div class="display-label">
+        CardExpiryDate : <b>@Html.DisplayFor(model => model.CardExpiryDate)</b>
+    </div>
+
+    <div class="display-label">
+        PhoneNumber : <b>@Html.DisplayFor(model => model.PhoneNumber)</b>
+    </div>
+</fieldset>

@@ -1,0 +1,162 @@
+﻿@model DataClassLibrary.Models.ProductCategoryRelation
+@{
+    ViewBag.Title = "CreateProduct";
+}
+<h2>
+    CreateProduct</h2>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    function changeStatus(orderId, userId) {
+        var status = $("#statusDropDown" + orderId).val();
+
+
+        var dataString = 'OrderId=' + orderId + '&UserId=' + userId + '&TransactionStatus=' + status;
+        $.ajax({
+            type: 'POST',
+            url: "/Orders/SaveChanges",
+            data: dataString,
+            success:
+                        function () { location.reload(true); },
+            Error: function () { alert("failure"); }
+        });
+    }
+</script>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    <table class="productcreate">
+        <tr>
+            <td style="width:67%;" class="productcreate">
+                <fieldset>
+                    <legend>Product</legend>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.product.ProductName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.product.ProductName)
+                        @Html.ValidationMessageFor(model => model.product.ProductName)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.product.ProductDescription)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.product.ProductDescription)
+                        @Html.ValidationMessageFor(model => model.product.ProductDescription)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.categories.CategoryName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.categories.CategoryName)
+                        @Html.ValidationMessageFor(model => model.categories.CategoryName)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.categories.SubCategoryName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.categories.SubCategoryName)
+                        @Html.ValidationMessageFor(model => model.categories.SubCategoryName)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.product.Price)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.product.Price)
+                        @Html.ValidationMessageFor(model => model.product.Price)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.product.UnitsInStock)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.product.UnitsInStock)
+                        @Html.ValidationMessageFor(model => model.product.UnitsInStock)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.product.StockAvailability)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.product.StockAvailability)
+                        @Html.ValidationMessageFor(model => model.product.StockAvailability)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.product.Colour)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.product.Colour)
+                        @Html.ValidationMessageFor(model => model.product.Colour)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.product.Size)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.product.Size)
+                        @Html.ValidationMessageFor(model => model.product.Size)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.product.Picture)
+                    </div>
+                    <div class="editor-field">
+                        <input type="file" name="file" />
+                    </div>
+                    <p>
+                        <input type="submit" value="Create" />
+                    </p>
+                </fieldset>
+            </td>
+            <td class="productcreate" style="vertical-align: top;">
+                <br />
+                <div style="vertical-align: top; border: 1px solid rgb(209,209,209); padding: 8px 20px 8px 6px; background-color: rgb(251,251,251); box-shadow: 10px 10px 5px #888888;">
+                    <b>Category Names and Id : </b>
+                    <ol>
+                        <li><div style="background-color: rgb(204,204,204); padding-left: 5px;">Books</div>
+                            <ul>
+                                <li>Fiction - 1</li>
+                                <li>Philosophy - 2</li>
+                                <li>Academics - 3</li>
+                                <li>Professional - 4</li>
+                                <li>Management - 5</li>
+                                <li>Biographies - 6</li>
+                            </ul>
+                        </li>
+                        <li><div style="background-color: rgb(204,204,204); padding-left: 5px;">Mobiles</div>
+                            <ul>
+                                <li>Nokia - 7</li>
+                                <li>Sony - 8</li>
+                                <li>Samsung - 9</li>
+                                <li>Blackberry - 10</li>
+                                <li>HTC - 11</li>
+                                <li>Accessories - 12</li>
+                            </ul>
+                        </li>
+                        <li><div style="background-color: rgb(204,204,204); padding-left: 5px;">Computers</div>
+                            <ul>
+                                <li>Laptop - 13</li>
+                                <li>Desktop - 14</li>
+                                <li>ComputerPeripherals - 15</li>
+                            </ul>
+                        </li>
+                        <li><div style="background-color: rgb(204,204,204); padding-left: 5px;">Cameras</div>
+                            <ul>
+                                <li>PointAndShoot - 16</li>
+                                <li>SLR - 17</li>
+                                <li>Camcorder - 18</li>
+                            </ul>
+                        </li>
+                        <li><div style="background-color: rgb(204,204,204); padding-left: 5px;">VideoPlayers</div>
+                            <ul>
+                                <li>Televisions - 19</li>
+                                <li>HomeTheaters - 20</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </td>
+        </tr>
+    <tr>
+    </tr>
+    </table>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

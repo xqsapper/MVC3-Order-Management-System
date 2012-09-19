@@ -1,0 +1,176 @@
+﻿@model DataClassLibrary.Models.CheckOutModel
+
+@{
+    ViewBag.Title = "CheckOut";
+}
+
+<h2>CheckOut</h2>
+
+<script src="../../Scripts/tabbed.layout.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function continue1Click() {
+        $("#tab1").hide();
+        $("#tab2").show();
+        $("#tab-2").css('background-color', '#E1E1E1');
+        $("#tab-1").css('background-color', '#ccc');
+    }
+    function continue2Click() {
+        $("#tab2").hide();
+        $("#tab3").show();
+        $("#tab-3").css('background-color', '#E1E1E1');
+        $("#tab-2").css('background-color', '#ccc');
+    }
+</script>
+
+<link href="@Url.Content("~/Content/screen.css")" rel="stylesheet" type="text/css" />
+@if (ViewBag.checkOutMessage != null)
+{
+     var s=@ViewBag.checkOutMessage as List<string>;
+    <p class="">
+        @foreach (var x in s)
+        { @x <br />}
+    </p><br />
+    @Html.ActionLink("Search for another product", "Index", "Product")<span> | </span>
+    @Html.ActionLink("Go to home", "Index", "Home")<span> | </span>
+    @Html.ActionLink("View my orders", "MyOrders", "MyAccount")<br />
+}
+else
+{
+    <nav> 
+        <ul>
+            <li><a href="#tab1" id="tab-1" onclick="$('#tab-1').css('background-color', '#E1E1E1');$('#tab-2').css('background-color', '#ccc');$('#tab-3').css('background-color', '#ccc');">User Details</a></li>
+            <li><a href="#tab2" id="tab-2" onclick="$('#tab-2').css('background-color', '#E1E1E1');$('#tab-1').css('background-color', '#ccc');$('#tab-3').css('background-color', '#ccc');">Order Summary</a></li>
+            <li><a href="#tab3" id="tab-3" onclick="$('#tab-3').css('background-color', '#E1E1E1');$('#tab-2').css('background-color', '#ccc');$('#tab-1').css('background-color', '#ccc');">Payment Options</a></li>
+        </ul>
+    </nav>
+
+    using (Html.BeginForm())
+    {
+        <div id="tabs">
+    <section id="tab1">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userdata.EmailId)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.userdata.EmailId, new { disabled = "disabled", @readonly = "readonly" })
+            @Html.HiddenFor(model => model.userdata.EmailId)
+            @Html.ValidationMessageFor(model => model.userdata.EmailId)
+        </div>
+
+	    <div class="editor-label">
+            @Html.LabelFor(model => model.userdata.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.userdata.FirstName)
+            @Html.ValidationMessageFor(model => model.userdata.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userdata.ShippingAddress)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.userdata.ShippingAddress)
+            @Html.ValidationMessageFor(model => model.userdata.ShippingAddress)
+        </div>
+
+         <div class="editor-label">
+            @Html.LabelFor(model => model.userdata.BillingAddress)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.userdata.BillingAddress)
+            @Html.ValidationMessageFor(model => model.userdata.BillingAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userdata.PhoneNumber)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.userdata.PhoneNumber)
+            @Html.ValidationMessageFor(model => model.userdata.PhoneNumber)
+        </div>
+
+        <p></p>
+        <input type="button" value="Continue" onclick="continue1Click()"/>
+    </section>
+    <section id="tab2">
+	    <table>
+            <tr>
+                <th>
+                    ProductName
+                </th>
+                <th>
+                    ProductDescription
+                </th>
+                <th>
+                    Unit Price
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+        @foreach (var item in Model.CartList)
+        {
+            var price = item.Product.Price * item.Cart.Quantity;
+            <tr>
+                <td>
+                    @Html.HiddenFor(modelItem => item.Product.ProductId)
+                    @Html.DisplayFor(modelItem => item.Product.ProductName)
+                    @Html.HiddenFor(modelItem => item.Product.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.ProductDescription)
+                    @Html.HiddenFor(modelItem => item.Product.ProductDescription)
+                </td>
+                    <td>
+                @Html.DisplayFor(modelItem => item.Product.Price)
+                @Html.HiddenFor(modelItem => item.Product.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cart.Quantity)
+                    @Html.HiddenFor(modelItem => item.Cart.Quantity)
+                </td>
+                <td>@price</td>
+                         
+            </tr>
+        }
+        </table>
+    
+        <br />
+        <div>Total:@Html.DisplayFor(model => model.Total)</div>
+        @Html.HiddenFor(model => model.Total)
+        <br />
+
+        <input type="button" value="Continue" onclick="continue2Click()"/>
+    </section>
+    <section id="tab3">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userdata.CardType)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.userdata.CardType)
+            @Html.ValidationMessageFor(model => model.userdata.CardType)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userdata.CardNumber)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.userdata.CardNumber)
+            @Html.ValidationMessageFor(model => model.userdata.CardNumber)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userdata.CardExpiryDate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.userdata.CardExpiryDate)
+            @Html.ValidationMessageFor(model => model.userdata.CardExpiryDate)
+        </div>
+        <p><input type="submit" value="Place Order" id= "placeorder"/></p>
+    </section>
+    </div>
+    }
+
+}

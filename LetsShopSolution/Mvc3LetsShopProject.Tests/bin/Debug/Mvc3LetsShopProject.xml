@@ -1,0 +1,472 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mvc3LetsShopProject</name>
+    </assembly>
+    <members>
+        <member name="T:Mvc3LetsShopProject.Controllers.UserController">
+            <summary>
+            This controller is used for accessing and performing all the methods related to a user.
+            </summary>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.Index">
+            <summary>
+            GET: /User/
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.Details(System.Int32)">
+            <summary>
+            GET: /User/Details/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.SignUp">
+            <summary>
+            GET: /User/Create
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.SignUp(DataClassLibrary.Models.UserData,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /User/SignUp
+            </summary>
+            <param name="UserData"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.Login">
+            <summary>
+            GET: /User/Login
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.Login(DataClassLibrary.Models.UserCredentials,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /User/Login
+            </summary>
+            <param name="UserCredentials"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.LogOff">
+            <summary>
+            GET: /User/LogOff
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.Edit(System.Int32)">
+            <summary>
+            GET: /User/Edit/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.Edit(System.Int32,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /User/Edit/5
+            </summary>
+            <param name="id"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            GET: /User/Delete/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.Delete(System.Int32,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /User/Delete/5
+            </summary>
+            <param name="id"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.ExportAllUsers">
+            <summary>
+            GET: /User/ExportAllUsers [Exports all users to an Excel File]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.ForgotPassword">
+            <summary>
+            This method is used to prompt the user for his userid, before proceeding to retrieve his security question.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.ForgotPassword(System.String)">
+            <summary>
+            This method is used to redirect to the page: User/SecurityQuestion, after confirmation of the userid.
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.SecurityQuestion(System.String)">
+            <summary>
+            This method is used to display the security question so that the user can login with his security answer.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.UserController.SecurityQuestion(DataClassLibrary.Models.UserData,System.Web.Mvc.FormCollection)">
+            <summary>
+            This method signs in a user with the help of his security answer.
+            </summary>
+            <param name="userdata"></param>
+            <param name="fc1"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mvc3LetsShopProject.Controllers.ProductController">
+            <summary>
+            This controller is used to access and perform all the actions related to a product.
+            </summary>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Index(System.Nullable{System.Int32})">
+            <summary>
+             GET: /Product/
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Index(System.String)">
+            <summary>
+            POST: /Product?string=productname
+            </summary>
+            <param name="ProductName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Details(System.Int32)">
+            <summary>
+            GET: /Product/Details/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.CreateProduct">
+            <summary>
+            GET: /Product/CreateProduct
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.CreateProduct(DataClassLibrary.Models.ProductCategoryRelation,System.Web.HttpPostedFileBase)">
+            <summary>
+            POST: /Product/CreateProduct
+            </summary>
+            <param name="pcr"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Edit(System.Int32)">
+            <summary>
+            GET: /Product/Edit/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Edit(DataClassLibrary.Models.ProductCategoryRelation,System.Int32,System.Web.HttpPostedFileBase)">
+            <summary>
+            POST: /Product/Edit/5
+            </summary>
+            <param name="pcr"></param>
+            <param name="id"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            GET: /Product/Delete/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Delete(System.Int32,DataClassLibrary.Models.Product)">
+            <summary>
+            POST: /Product/Delete/5
+            </summary>
+            <param name="id"></param>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.AddToCart(System.Int32)">
+            <summary>
+            Product/Add to Cart/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Cart">
+            <summary>
+            Product/Cart
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.RemoveFromCart(System.Int32)">
+            <summary>
+            Product/RemoveFromCart/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.RemoveFromFrontCart(System.Int32)">
+            <summary>
+            Product/RemoveFromFrontCart/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.IncrementQuantity(System.Int32)">
+            <summary>
+            Product/Cart
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.IncrementQuantityFront(System.Int32)">
+            <summary>
+            Product/Cart
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.DecrementQuantity(System.Int32)">
+            <summary>
+            Product/Cart
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.DecrementQuantityFront(System.Int32)">
+            <summary>
+            Product/Cart
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.EmptyCart(System.String)">
+            <summary>
+            Product/EmptyCart/abd
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.CheckOut">
+            <summary>
+            Product/CheckOut
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.CheckOut(DataClassLibrary.Models.CheckOutModel)">
+            <summary>
+            Product/CheckOut 
+            </summary>
+            <param name="checkout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.ErrorPage">
+            <summary>
+            Product/ErrorPage
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Browse(System.String)">
+            <summary>
+            GET: /Product/Browse?Category=Books
+            </summary>
+            <param name="Category"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Mvc3LetsShopProject.Controllers.ProductController.Search(System.String,System.String)" -->
+        <member name="M:Mvc3LetsShopProject.Controllers.ProductController.Browse(System.String,System.Int32,System.Int32)">
+            <summary>
+            POST: /Product/Browse?Category=Books
+            </summary>
+            <param name="Category"></param>
+            <param name="Max"></param>
+            <param name="Min"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mvc3LetsShopProject.Controllers.MyAccountController">
+            <summary>
+            This controller is used for storing all the details related to a particular user (eg - his details, orders etc.)
+            </summary>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.Index">
+            <summary>
+            GET: /MyAccount/
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.Details">
+            <summary>
+            GET: /MyAccount/Details/5
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.Edit">
+            <summary>
+            GET: /MyAccount/Edit
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.Edit(DataClassLibrary.Models.UserData,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /MyAccount/Edit/5
+            </summary>
+            <param name="user"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.MyOrders">
+            <summary>
+            GET: MyAccount/MyOrders
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.CancelOrder(System.Int32)">
+            <summary>
+            GET: MyAccount/CancelOrder/5
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.CancelOrder(System.Int32,System.String)">
+            <summary>
+            POST: MyAccount/CancelOrder/5
+            </summary>
+            <param name="id"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.OrderDetails(System.Int32)">
+            <summary>
+            GET: MyAccount/OrderDetails/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.MyAccountController.ExportMyOrders">
+            <summary>
+            GET: MyAccount/ExportMyOrders [Exports all users to an Excel File]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Mvc3LetsShopProject.Controllers.OrdersController">
+            <summary>
+            This controller is used for accessing and performing all the methods related to an order.
+            </summary>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.Index">
+            <summary>
+            GET: /Orders/
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.Details(System.Int32)">
+            <summary>
+            GET: /Orders/Details/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.Create">
+            <summary>
+            GET: /Orders/Create
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.Create(System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /Orders/Create
+            </summary>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.Edit(System.Int32)">
+            <summary>
+            GET: /Orders/Edit/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.Edit(System.Int32,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /Orders/Edit/5
+            </summary>
+            <param name="id"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.Delete(System.Int32)">
+            <summary>
+            GET: /Orders/Delete/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.Delete(System.Int32,System.Web.Mvc.FormCollection)">
+            <summary>
+            POST: /Orders/Delete/5
+            </summary>
+            <param name="id"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.ExportAllOrders">
+            <summary>
+            GET: /Orders/ExportAllOrders [Exports all users to an Excel File]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.OrdersController.SaveChanges(System.Int32,System.String,System.String)">
+            <summary>
+            This method is used to save the transaction status which has been changed from 'Processing' to 'Shipped'.
+            </summary>
+            <param name="OrderId"></param>
+            <param name="UserId"></param>
+            <param name="TransactionStatus"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mvc3LetsShopProject.Controllers.HomeController">
+            <summary>
+            The home controller is used mainly for displaying the home page.
+            </summary>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.HomeController.Index">
+            <summary>
+            GET: Home/Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc3LetsShopProject.Controllers.HomeController.About">
+            <summary>
+            GET: Home/About
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Mvc3LetsShopProject.MvcApplication">
+            <summary>
+            This is the main class of this solution and it resides in the global.asax file.
+            </summary>
+        </member>
+        <member name="M:Mvc3LetsShopProject.MvcApplication.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            This is the Register Global Filters method in the Global.asax file.
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="M:Mvc3LetsShopProject.MvcApplication.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            This is the Register Routes method in the Global.asax file.
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="M:Mvc3LetsShopProject.MvcApplication.Application_Start">
+            <summary>
+            This is the first method which is accessed while running the application.
+            </summary>
+        </member>
+    </members>
+</doc>

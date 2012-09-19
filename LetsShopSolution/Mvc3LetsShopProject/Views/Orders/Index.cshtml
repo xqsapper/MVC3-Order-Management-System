@@ -1,0 +1,92 @@
+﻿@model IEnumerable<DataClassLibrary.Models.Orders>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>List of all orders.</h2>
+
+<script type="text/javascript">
+    function changeStatus(orderId, userId) {
+        var status = $("#statusDropDown" + orderId).val();
+
+
+        var dataString = 'OrderId=' + orderId + '&UserId=' + userId + '&TransactionStatus=' + status;
+        $.ajax({
+            type: 'POST',
+            url: "/Orders/SaveChanges",
+            data: dataString,
+            success:
+                        function () { location.reload(true); },
+            Error: function () { alert("failure"); }
+        });
+    }
+</script>
+
+<p>
+    @Html.ActionLink("Export to Excel", "ExportAllOrders")
+</p>
+
+<div class="AllOrders">
+    <table>
+        <tr>
+            <th>
+                OrderId
+            </th>
+            <th>
+                UserId
+            </th>
+            <th>
+                OrderDate
+            </th>
+            <th>
+                TransactionStatus
+            </th>
+            <th>
+                PhoneNumber
+            </th>
+            <th>
+                EmailId
+            </th>
+            @*<th></th>*@
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDate)
+                </td>
+                 <td>
+               @if (item.TransactionStatus.Equals("Shipped"))
+               {
+                     @Html.DisplayFor(modelItem => item.TransactionStatus)
+               }
+               else
+               {
+                    @Html.DropDownListFor(modelItem => item.TransactionStatus, item.StatusList, new { id = "statusDropDown"+item.OrderId })
+               }
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailId)
+                </td>
+                @if (!item.TransactionStatus.Equals("Shipped"))
+                {  
+                    <td>
+                        <a onclick="changeStatus('@item.OrderId','@item.UserId')" style="cursor:pointer;text-decoration:underline;color:Blue">
+                            Save</a>
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+    <div>
+        <br />
+    </div>
+</div>

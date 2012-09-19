@@ -1,0 +1,104 @@
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/4/2012 3:28:26 AM
+
+Message: HandlingInstanceID: b7369b22-23da-41a4-ab5d-069854d044da
+An exception of type 'System.IndexOutOfRangeException' occurred and was caught.
+-------------------------------------------------------------------------------
+07/04/2012 08:58:26
+Type : System.IndexOutOfRangeException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : UnitPrice
+Source : System.Data
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Int32 GetOrdinal(System.String)
+Stack Trace :    at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Microsoft.Practices.EnterpriseLibrary.Data.DataReaderWrapper.System.Data.IDataRecord.get_Item(String name) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\DataReaderWrapper.cs:line 466
+   at DataClassLibrary.DataProvider.PriceFilter(String CategoryName, Int32 Max, Int32 Min) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\DataClassLibrary\DataProvider.cs:line 853
+   at DataClassLibrary.LetsShopImplementation.PriceFilter(String categoryname, Int32 max, Int32 min) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\DataClassLibrary\LetsShopImplementation.cs:line 312
+   at Mvc3LetsShopProject.Controllers.ProductController.Browse(String Category, Int32 Max, Int32 Min) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\Controllers\ProductController.cs:line 601
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/4/2012 3:28:26 AM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-5-129858460889958960
+ThreadIdentity : abd
+WindowsIdentity : SAPIENT\adebna
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-5-129858460889958960
+
+ProcessId: 2060
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:6668
+
+Extended Properties: 
+------------------------------------------
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/4/2012 3:32:35 AM
+
+Message: HandlingInstanceID: 8aea84eb-9ffd-452f-b29d-e04283bb1e86
+An exception of type 'System.IndexOutOfRangeException' occurred and was caught.
+-------------------------------------------------------------------------------
+07/04/2012 09:02:35
+Type : System.IndexOutOfRangeException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : UnitPrice
+Source : System.Data
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Int32 GetOrdinal(System.String)
+Stack Trace :    at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Microsoft.Practices.EnterpriseLibrary.Data.DataReaderWrapper.System.Data.IDataRecord.get_Item(String name) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\DataReaderWrapper.cs:line 466
+   at DataClassLibrary.DataProvider.PriceFilter(String CategoryName, Int32 Max, Int32 Min) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\DataClassLibrary\DataProvider.cs:line 853
+   at DataClassLibrary.LetsShopImplementation.PriceFilter(String categoryname, Int32 max, Int32 min) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\DataClassLibrary\LetsShopImplementation.cs:line 312
+   at Mvc3LetsShopProject.Controllers.ProductController.Browse(String Category, Int32 Max, Int32 Min) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\Controllers\ProductController.cs:line 601
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/4/2012 3:32:35 AM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-6-129858463513581296
+ThreadIdentity : abd
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-6-129858463513581296
+
+ProcessId: 2060
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:6668
+
+
+------------------------------------------

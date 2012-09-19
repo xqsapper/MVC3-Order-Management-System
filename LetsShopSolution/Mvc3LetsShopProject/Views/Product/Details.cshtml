@@ -1,0 +1,61 @@
+﻿@model DataClassLibrary.Models.ProductCategoryRelation
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>Product</legend>
+    <br />
+    @if (HttpContext.Current.Session["usertype"] != null)
+    {
+        <div style="float: right">
+            <a href="@Url.Action("AddToCart", new { id = Model.product.ProductId })">
+                <img src="@Url.Content("~/Images/addtocart.jpg")" alt="AddToCart" width="100px" height="80px" />
+            </a>
+        </div>
+    }
+    <div>
+        <img src="@Url.Content(Model.product.Picture)" alt="no Image" height="140px"/>
+        @Html.HiddenFor(model => model.product.Picture)
+    </div>
+    <div class="display-label">
+        Product Name : <b>@Html.DisplayFor(model => model.product.ProductName)</b>
+    </div>
+    <div class="display-label">
+        Product Description : <b>@Html.DisplayFor(model => model.product.ProductDescription)</b>
+    </div>
+    <div class="display-label">
+        Category Name : <b>@Html.DisplayFor(model => model.categories.CategoryName)</b>
+    </div>
+    <div class="display-label">
+        SubCategory Name : <b>@Html.DisplayFor(model => model.categories.SubCategoryName)</b>
+    </div>
+    <div class="display-label">
+        Price : <b>@Html.DisplayFor(model => model.product.Price)</b>
+    </div>
+    <div class="display-label">
+        UnitsInStock : <b>@Html.DisplayFor(model => model.product.UnitsInStock)</b>
+    </div>
+    <div class="display-label">
+        Colour : <b>@Html.DisplayFor(model => model.product.Colour)</b>
+    </div>
+    <div class="display-label">
+        Size : <b>@Html.DisplayFor(model => model.product.Size)</b>
+    </div>
+</fieldset>
+<p>
+    @if (HttpContext.Current.Session["usertype"] != null)
+    {
+        if (HttpContext.Current.Session["usertype"].ToString() == "Admin")
+        {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.product.ProductId })<span> | </span>
+        @Html.ActionLink("Delete", "Delete", new { id = Model.product.ProductId })<span> | </span>
+        }
+    }
+    @Html.ActionLink("Back to List", "Index")
+    @if (HttpContext.Current.Session["usertype"] != null)
+    {
+        <span>| </span>@Html.ActionLink(" AddToCart", "AddToCart", new { id = Model.product.ProductId })
+    }
+</p>

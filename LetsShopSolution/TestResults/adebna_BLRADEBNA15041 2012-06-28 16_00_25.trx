@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="002bc9fa-8541-48d9-9e32-9a81ea366de6" name="adebna@BLRADEBNA15041 2012-06-28 16:00:25" runUser="SAPIENT\adebna" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="838f0e14-cce0-49fd-b3d0-b8cf5dde72f7">
+    <Deployment runDeploymentRoot="adebna_BLRADEBNA15041 2012-06-28 16_00_25">
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Configuration.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Interception.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Moq.4.0.10827\NET40\Moq.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\DataClassLibrary\bin\Debug\DataClassLibrary.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\packages\MvcSiteMapProvider.3.2.3.0\lib\net40\MvcSiteMapProvider.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\bin\Mvc3LetsShopProject.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.ServiceLocation.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ADO.NET Entity Framework 4.1 RC\Binaries\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-28T16:00:25.1860871+05:30" queuing="2012-06-28T16:00:25.7530871+05:30" start="2012-06-28T16:00:25.7810871+05:30" finish="2012-06-28T16:00:27.0010871+05:30" />
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" passed="4" error="0" failed="2" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CanReturnProductById" storage="c:\users\adebna\documents\visual studio 2010\projects\letsshopsolution\mvc3letsshopproject.tests\bin\debug\mvc3letsshopproject.tests.dll" id="925000ee-8caf-5b80-499c-ca00a3829d10">
+      <Execution id="e32c6119-ce27-4650-9aac-7f21c9e3faa2" />
+      <TestMethod codeBase="C:/Users/adebna/Documents/Visual Studio 2010/Projects/LetsShopSolution/Mvc3LetsShopProject.Tests/bin/Debug/Mvc3LetsShopProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mvc3LetsShopProject.Tests.ProductControllerTest, Mvc3LetsShopProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanReturnProductById" />
+    </UnitTest>
+    <UnitTest name="IndexTest" storage="c:\users\adebna\documents\visual studio 2010\projects\letsshopsolution\mvc3letsshopproject.tests\bin\debug\mvc3letsshopproject.tests.dll" id="a39f0f2a-6959-80b4-2378-06d4096b3423">
+      <Execution id="ab0c107f-5b6b-4403-9ed4-3a4ade2aa7a4" />
+      <TestMethod codeBase="C:/Users/adebna/Documents/Visual Studio 2010/Projects/LetsShopSolution/Mvc3LetsShopProject.Tests/bin/Debug/Mvc3LetsShopProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mvc3LetsShopProject.Tests.ProductControllerTest, Mvc3LetsShopProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IndexTest" />
+      <AspNet webSiteUrl="http://localhost:49741" />
+    </UnitTest>
+    <UnitTest name="CanReturnProductByName" storage="c:\users\adebna\documents\visual studio 2010\projects\letsshopsolution\mvc3letsshopproject.tests\bin\debug\mvc3letsshopproject.tests.dll" id="d475c538-1af9-549c-3fa2-eb7e4dc9925d">
+      <Execution id="0d0dbd2e-dc03-49e5-a003-17431756e649" />
+      <TestMethod codeBase="C:/Users/adebna/Documents/Visual Studio 2010/Projects/LetsShopSolution/Mvc3LetsShopProject.Tests/bin/Debug/Mvc3LetsShopProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mvc3LetsShopProject.Tests.ProductControllerTest, Mvc3LetsShopProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanReturnProductByName" />
+    </UnitTest>
+    <UnitTest name="CanReturnAllProducts" storage="c:\users\adebna\documents\visual studio 2010\projects\letsshopsolution\mvc3letsshopproject.tests\bin\debug\mvc3letsshopproject.tests.dll" id="10a52afd-8cab-a9b8-ea98-a24507e0e83a">
+      <Execution id="5cf1df34-2f43-43df-bff3-98943275b093" />
+      <TestMethod codeBase="C:/Users/adebna/Documents/Visual Studio 2010/Projects/LetsShopSolution/Mvc3LetsShopProject.Tests/bin/Debug/Mvc3LetsShopProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mvc3LetsShopProject.Tests.ProductControllerTest, Mvc3LetsShopProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanReturnAllProducts" />
+    </UnitTest>
+    <UnitTest name="CanUpdateProduct" storage="c:\users\adebna\documents\visual studio 2010\projects\letsshopsolution\mvc3letsshopproject.tests\bin\debug\mvc3letsshopproject.tests.dll" id="b0aef6aa-76cb-0a1a-6d00-b910c461b8bf">
+      <Execution id="1e7acccd-671e-4472-833b-46e77b179cf6" />
+      <TestMethod codeBase="C:/Users/adebna/Documents/Visual Studio 2010/Projects/LetsShopSolution/Mvc3LetsShopProject.Tests/bin/Debug/Mvc3LetsShopProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mvc3LetsShopProject.Tests.ProductControllerTest, Mvc3LetsShopProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanUpdateProduct" />
+    </UnitTest>
+    <UnitTest name="CanInsertProduct" storage="c:\users\adebna\documents\visual studio 2010\projects\letsshopsolution\mvc3letsshopproject.tests\bin\debug\mvc3letsshopproject.tests.dll" id="39a6da29-d1bc-79b1-7991-6d4b79863f2d">
+      <Execution id="e9ec60a4-3db2-4564-9609-db24b07324ee" />
+      <TestMethod codeBase="C:/Users/adebna/Documents/Visual Studio 2010/Projects/LetsShopSolution/Mvc3LetsShopProject.Tests/bin/Debug/Mvc3LetsShopProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mvc3LetsShopProject.Tests.ProductControllerTest, Mvc3LetsShopProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanInsertProduct" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="10a52afd-8cab-a9b8-ea98-a24507e0e83a" executionId="5cf1df34-2f43-43df-bff3-98943275b093" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39a6da29-d1bc-79b1-7991-6d4b79863f2d" executionId="e9ec60a4-3db2-4564-9609-db24b07324ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="925000ee-8caf-5b80-499c-ca00a3829d10" executionId="e32c6119-ce27-4650-9aac-7f21c9e3faa2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a39f0f2a-6959-80b4-2378-06d4096b3423" executionId="ab0c107f-5b6b-4403-9ed4-3a4ade2aa7a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0aef6aa-76cb-0a1a-6d00-b910c461b8bf" executionId="1e7acccd-671e-4472-833b-46e77b179cf6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d475c538-1af9-549c-3fa2-eb7e4dc9925d" executionId="0d0dbd2e-dc03-49e5-a003-17431756e649" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5cf1df34-2f43-43df-bff3-98943275b093" testId="10a52afd-8cab-a9b8-ea98-a24507e0e83a" testName="CanReturnAllProducts" computerName="BLRADEBNA15041" duration="00:00:00.3912410" startTime="2012-06-28T16:00:25.8170871+05:30" endTime="2012-06-28T16:00:26.5670871+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5cf1df34-2f43-43df-bff3-98943275b093">
+    </UnitTestResult>
+    <UnitTestResult executionId="e9ec60a4-3db2-4564-9609-db24b07324ee" testId="39a6da29-d1bc-79b1-7991-6d4b79863f2d" testName="CanInsertProduct" computerName="BLRADEBNA15041" duration="00:00:00.0132244" startTime="2012-06-28T16:00:26.5730871+05:30" endTime="2012-06-28T16:00:26.6040871+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9ec60a4-3db2-4564-9609-db24b07324ee">
+    </UnitTestResult>
+    <UnitTestResult executionId="e32c6119-ce27-4650-9aac-7f21c9e3faa2" testId="925000ee-8caf-5b80-499c-ca00a3829d10" testName="CanReturnProductById" computerName="BLRADEBNA15041" duration="00:00:00.0066066" startTime="2012-06-28T16:00:26.6090871+05:30" endTime="2012-06-28T16:00:26.6210871+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e32c6119-ce27-4650-9aac-7f21c9e3faa2">
+    </UnitTestResult>
+    <UnitTestResult executionId="ab0c107f-5b6b-4403-9ed4-3a4ade2aa7a4" testId="a39f0f2a-6959-80b4-2378-06d4096b3423" testName="IndexTest" computerName="BLRADEBNA15041" startTime="2012-06-28T16:00:26.6280871+05:30" endTime="2012-06-28T16:00:26.8220871+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab0c107f-5b6b-4403-9ed4-3a4ade2aa7a4">
+      <Output>
+        <ErrorInfo>
+          <Message>The URL specified ('http://localhost:49741') does not correspond to a valid directory. Tests configured to run in ASP.NET in IIS require a valid directory to exist for the URL. The URL may be invalid or may not point to a valid Web application.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1e7acccd-671e-4472-833b-46e77b179cf6" testId="b0aef6aa-76cb-0a1a-6d00-b910c461b8bf" testName="CanUpdateProduct" computerName="BLRADEBNA15041" duration="00:00:00.0069665" startTime="2012-06-28T16:00:26.8300871+05:30" endTime="2012-06-28T16:00:26.8510871+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e7acccd-671e-4472-833b-46e77b179cf6">
+    </UnitTestResult>
+    <UnitTestResult executionId="0d0dbd2e-dc03-49e5-a003-17431756e649" testId="d475c538-1af9-549c-3fa2-eb7e4dc9925d" testName="CanReturnProductByName" computerName="BLRADEBNA15041" duration="00:00:00.0394360" startTime="2012-06-28T16:00:26.8580871+05:30" endTime="2012-06-28T16:00:26.9200871+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d0dbd2e-dc03-49e5-a003-17431756e649">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;3&gt;. Actual:&lt;2&gt;. </Message>
+          <StackTrace>   at Mvc3LetsShopProject.Tests.ProductControllerTest.CanReturnProductByName() in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject.Tests\ProductControllerTest.cs:line 104
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,265 @@
+/*/body {margin:25px; font:11px Verdana,Arial; background:#fff; height:800px; width:1024px; }/*/
+
+ul.menu {list-style:none; margin:0; padding: 2px}
+ul.menu * {margin:0; padding:0}
+ul.menu a {display:block; color:#000; text-decoration:none}
+ul.menu li {position:relative; float:left; margin-right:2px}
+ul.menu ul {position:absolute; top:26px; left:0; background:#d1d1d1; display:none; opacity:0; list-style:none}
+ul.menu ul li {position:relative; border:1px solid #aaa; border-top:none; width:148px; margin:0}
+ul.menu ul li a {display:block; padding:2px 5px 2px; background-color:#d1d1d1}
+ul.menu ul li a:hover {background-color:#c5c5c5}
+ul.menu ul ul {left:148px; top:-1px}
+ul.menu .menulink {border:1px solid #aaa;cursor: pointer; padding:2px 5px 2px; font-weight:bold; background:url(../Images/header.gif); width:138px}
+ul.menu .menulink:hover, ul.menu .menuhover {background:url(../Images/header_over.gif)}
+ul.menu .sub {background:#d1d1d1 url(../Images/arrow.gif) 136px 8px no-repeat; cursor:pointer;}
+ul.menu .topline {border-top:1px solid #aaa;cursor:pointer;}
+ul.menu .bottom {cursor:pointer;}
+
+/*/
+.leftSide
+{
+   float:left;
+   width:98%;
+   border: 1px solid #99aa99;
+   padding:10px 0px 10px 10px; 
+   position:relative;
+   top:10px; 
+}
+
+.btn
+{
+    float:right;
+    display: block;
+	clear: left;
+	height: 24px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+	margin: 10px 0;
+    width: 74px;
+	background: transparent url(../images/bt_login.png) no-repeat 0 0;    
+}
+
+.popupbtn
+{
+    float:right;
+    display: block;
+    right:40px;
+	clear: left;
+	height: 24px;
+	text-align:center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+	margin: 10px 0;
+    width: 110px;
+	background: transparent url(../images/bt_chng.png) no-repeat 0 0;    
+}
+/*/
+
+.hideSkiplink
+{
+   
+    background-color:rgb(100,100,100);
+    width: 100%;
+    height:32px;   
+}
+
+.Footer
+{
+    padding-top:10px;
+    height:30px;
+    width:100%;
+    background:rgb(92,125,158);
+    position:relative;
+    /* negative value of footer height */
+    clear:both;
+    top: 18px;
+    left: 3px;
+}
+
+
+
+/*/
+.selectcat { width: 120px; height: 28px; float: right; padding: 2px 2px 2px 2px; }
+div.rightDataSec
+{
+    width:95%;
+    float:right;
+    padding:10px 10px 10px 10px;
+    height:auto;
+    position:relative;
+}
+div.Product
+{
+  width:18%;
+  padding: 20px 0px 0px 10px;
+  position:relative;
+  display:inline;
+  display:inline-block;
+}
+
+div.prodTitle
+{
+    padding:5px 0px 0px 0px;
+    width:95%;
+    height:20px;
+    font-weight:bold;
+    font: 11px Verdana,Arial;
+    display:inline-block;
+}
+.AProdName
+{
+    text-align:justify;
+    white-space:nowrap;
+    font-size:11px;
+    display:inline-block;
+    }
+
+div.desc
+{
+ padding:30px 0px 0px 0px;
+ width:90%;
+}
+.ModifyDiv
+{
+    padding:5px 5px 5px 5px;
+
+}
+
+div.AddProductTb
+{
+    float:right;
+    padding:0px 10px 0px 0px;
+    
+    }
+    
+.ModifyAtag
+{
+   width:100px;
+   text-align:right;
+   padding-bottom:3px;
+      
+}
+
+.ProdImage
+ {
+ width:70%;
+ left:450px;
+ padding:10px 0px 10px 0px;
+ text-align:center;
+}
+
+.CategoryHeader
+{
+  border-bottom:2px solid rgb(218, 124, 12); 
+  display:block;
+  width:95%;
+ }
+ 
+ .productChange
+ {
+   color: #15ADFF;
+   cursor: pointer; 
+   float:right; 
+   padding:0px 5px 0px 5px;
+   font-size:14px;
+   font-weight:bold;
+}
+ 
+ 
+ 
+ .CommonHeader-H2
+ {
+     text-decoration:none;
+     font-size:15px;
+     font-weight:bold;    
+ }
+ .CommonHeader-H3
+ {
+     border-bottom:2px solid rgb(218, 124, 12);
+     text-decoration:none;
+     font-size:20px;
+     font-weight:bold;
+     }
+ 
+ .ProdDescription
+ {
+  padding: 20px 0px 10px 10px;
+  font-size:13px;
+  word-spacing:2px;
+  text-align:justify;
+   
+ }
+ 
+ #contactArea
+ {
+     padding:0px 0px 5px 5px;
+ }
+ 
+ .rightmod
+ {
+     width: 30%;
+     display:inline-block;
+     text-align:center;
+     }
+ .leftmod
+ {
+     position:relative;
+     display:inline-block;
+  }
+   
+ .TextAreastyle
+ {
+     width:95%;
+     height:100%;
+     resize:none;
+     }  
+     
+.backgroundPopup{
+display:none;
+position:fixed;
+_position:absolute;
+height:100%;
+width:100%;
+top:0;
+left:0;
+background:#000000;
+border:1px solid #cecece;
+z-index:1;
+}
+.popupContact{
+display:none;
+position:fixed;
+_position:absolute;
+height:500px;
+width:500px;
+background:#FFFFFF;
+border:2px solid #cecece;
+z-index:2;
+padding:12px;
+font-size:13px;
+}
+.popupContact h1{
+text-align:left;
+color:#6FA5FD;
+font-size:22px;
+font-weight:700;
+border-bottom:1px dotted #D3D3D3;
+padding-bottom:2px;
+margin-bottom:20px;
+}
+.popupContactClose{
+font-size:14px;
+line-height:14px;
+right:6px;
+top:4px;
+cursor:pointer;
+position:absolute;
+color:#6fa5fd;
+font-weight:700;
+display:block;
+}
+/*/
+

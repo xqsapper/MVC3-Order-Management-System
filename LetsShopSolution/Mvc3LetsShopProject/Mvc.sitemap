@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-3.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-3.0 MvcSiteMapSchema.xsd"
+            enableLocalization="true">
+
+
+<mvcSiteMapNode title="Home" controller="Home" action="Index">
+  <mvcSiteMapNode title="About" controller="Home" action="About"/>
+
+  <mvcSiteMapNode title="Products" controller="Product" action="Index">
+      
+      <mvcSiteMapNode title="Create" controller="Product" action="CreateProduct"/>
+      <mvcSiteMapNode title="Details" controller="Product" action="Details" />
+      <mvcSiteMapNode title="Edit" controller="Product" action="Edit"/>
+      <mvcSiteMapNode title="Cart" controller="Product" action="Cart"/>
+      <mvcSiteMapNode title="Check Out" controller="Product" action="CheckOut"/>
+    
+      <mvcSiteMapNode title="Books" controller="Product" action="Browse" category="Books" >
+        <mvcSiteMapNode title="Fiction" controller="Product" action="Search" category="Books" subcategory="Fiction" />
+        <mvcSiteMapNode title="Philosophy" controller="Product" action="Search" category="Books" subcategory="Philosophy" />
+        <mvcSiteMapNode title="Academics" controller="Product" action="Search" category="Books" subcategory="Academics" />
+        <mvcSiteMapNode title="Professional" controller="Product" action="Search" category="Books" subcategory="Professional" />
+        <mvcSiteMapNode title="Management" controller="Product" action="Search" category="Books" subcategory="Management" />
+        <mvcSiteMapNode title="Biographies" controller="Product" action="Search" category="Books" subcategory="Biographies" />
+      </mvcSiteMapNode>
+
+      <mvcSiteMapNode title="Mobiles" controller="Product" action="Browse" category="Mobiles" >
+        <mvcSiteMapNode title="Nokia" controller="Product" action="Search" category="Mobiles" subcategory="Nokia" />
+        <mvcSiteMapNode title="Sony" controller="Product" action="Search" category="Mobiles" subcategory="Sony" />
+        <mvcSiteMapNode title="Samsung" controller="Product" action="Search" category="Mobiles" subcategory="Samsung" />
+        <mvcSiteMapNode title="Blackberry" controller="Product" action="Search" category="Mobiles" subcategory="Blackberry" />
+        <mvcSiteMapNode title="HTC" controller="Product" action="Search" category="Mobiles" subcategory="HTC" />
+        <mvcSiteMapNode title="Accessories" controller="Product" action="Search" category="Mobiles" subcategory="Accessories" />
+      </mvcSiteMapNode>
+      
+      <mvcSiteMapNode title="Computers" controller="Product" action="Browse" category="Computers">
+        <mvcSiteMapNode title="Laptop" controller="Product" action="Search" category="Computers" subcategory="Laptop" />
+        <mvcSiteMapNode title="Desktop" controller="Product" action="Search" category="Computers" subcategory="Desktop" />
+        <mvcSiteMapNode title="ComputerPeripherals" controller="Product" action="Search" category="Computers" subcategory="ComputerPeripherals" />
+      </mvcSiteMapNode>
+
+      <mvcSiteMapNode title="Cameras" controller="Product" action="Browse" category="Cameras">
+        <mvcSiteMapNode title="PointAndShoot" controller="Product" action="Search" category="Cameras" subcategory="PointAndShoot" />
+        <mvcSiteMapNode title="SLR" controller="Product" action="Search" category="Cameras" subcategory="SLR" />
+        <mvcSiteMapNode title="Camcorder" controller="Product" action="Search" category="Cameras" subcategory="Camcorder" />
+      </mvcSiteMapNode>
+
+      <mvcSiteMapNode title="VideoPlayers" controller="Product" action="Browse" category="VideoPlayers">
+        <mvcSiteMapNode title="Televisions" controller="Product" action="Search" category="VideoPlayers" subcategory="Televisions" />
+        <mvcSiteMapNode title="HomeTheaters" controller="Product" action="Search" category="VideoPlayers" subcategory="HomeTheaters" />
+      </mvcSiteMapNode>
+    
+  </mvcSiteMapNode>
+
+  <mvcSiteMapNode title="My Account" controller="MyAccount" action="Index">
+    <mvcSiteMapNode title="My Orders" controller="MyAccount" action="MyOrders" />
+  </mvcSiteMapNode>
+  
+  <mvcSiteMapNode title="Users" controller="User" action="Index" />
+  <mvcSiteMapNode title="All Orders" controller="Orders" action="Index" />
+  
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

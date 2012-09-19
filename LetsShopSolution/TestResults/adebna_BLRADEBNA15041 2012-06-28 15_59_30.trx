@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="09270ce8-5d52-417c-82e9-83bae13ee79e" name="adebna@BLRADEBNA15041 2012-06-28 15:59:30" runUser="SAPIENT\adebna" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="b48687b3-bac7-4e07-a231-d5a4c69da1a6">
+    <Deployment runDeploymentRoot="adebna_BLRADEBNA15041 2012-06-28 15_59_30">
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Configuration.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Interception.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Moq.4.0.10827\NET40\Moq.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\DataClassLibrary\bin\Debug\DataClassLibrary.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\packages\MvcSiteMapProvider.3.2.3.0\lib\net40\MvcSiteMapProvider.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\bin\Mvc3LetsShopProject.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.ServiceLocation.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ADO.NET Entity Framework 4.1 RC\Binaries\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-28T15:59:30.3360871+05:30" queuing="2012-06-28T15:59:36.9950871+05:30" start="2012-06-28T15:59:37.4680871+05:30" finish="2012-06-28T15:59:40.6790871+05:30" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CanInsertProduct" storage="c:\users\adebna\documents\visual studio 2010\projects\letsshopsolution\mvc3letsshopproject.tests\bin\debug\mvc3letsshopproject.tests.dll" id="39a6da29-d1bc-79b1-7991-6d4b79863f2d">
+      <Execution id="75bf6b16-8ee7-4834-9f55-975383cea865" />
+      <TestMethod codeBase="C:/Users/adebna/Documents/Visual Studio 2010/Projects/LetsShopSolution/Mvc3LetsShopProject.Tests/bin/Debug/Mvc3LetsShopProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mvc3LetsShopProject.Tests.ProductControllerTest, Mvc3LetsShopProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanInsertProduct" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="39a6da29-d1bc-79b1-7991-6d4b79863f2d" executionId="75bf6b16-8ee7-4834-9f55-975383cea865" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="75bf6b16-8ee7-4834-9f55-975383cea865" testId="39a6da29-d1bc-79b1-7991-6d4b79863f2d" testName="CanInsertProduct" computerName="BLRADEBNA15041" duration="00:00:00.9597502" startTime="2012-06-28T15:59:37.9440871+05:30" endTime="2012-06-28T15:59:39.7850871+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75bf6b16-8ee7-4834-9f55-975383cea865">
+    </UnitTestResult>
+  </Results>
+</TestRun>

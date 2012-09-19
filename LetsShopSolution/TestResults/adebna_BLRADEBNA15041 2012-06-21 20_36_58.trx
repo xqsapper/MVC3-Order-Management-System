@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="6b73793b-67f5-4544-85dc-c704d6d39d01" name="adebna@BLRADEBNA15041 2012-06-21 20:36:58" runUser="SAPIENT\adebna" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="48a55436-997c-415e-9d8b-93d4fb9fb312">
+    <Deployment runDeploymentRoot="adebna_BLRADEBNA15041 2012-06-21 20_36_58">
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Configuration.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Interception.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.ServiceLocation.dll" />
+      <DeploymentItem filename="C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\bin\Mvc3LetsShopProject.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ADO.NET Entity Framework 4.1 RC\Binaries\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-21T20:36:58.6652401+05:30" queuing="2012-06-21T20:36:59.1242401+05:30" start="2012-06-21T20:36:59.2102401+05:30" finish="2012-06-21T20:37:00.4742401+05:30" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateProductTest" storage="c:\users\adebna\documents\visual studio 2010\projects\letsshopsolution\mvc3letsshopproject.tests\bin\debug\mvc3letsshopproject.tests.dll" id="e276d8c8-0dcf-4258-b465-0d1c21a4de48">
+      <Execution id="8c290c4b-e087-4efc-a628-2f4052bf332c" />
+      <TestMethod codeBase="C:/Users/adebna/Documents/Visual Studio 2010/Projects/LetsShopSolution/Mvc3LetsShopProject.Tests/bin/Debug/Mvc3LetsShopProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mvc3LetsShopProject.Tests.LetsShopImplementationTest, Mvc3LetsShopProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e276d8c8-0dcf-4258-b465-0d1c21a4de48" executionId="8c290c4b-e087-4efc-a628-2f4052bf332c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8c290c4b-e087-4efc-a628-2f4052bf332c" testId="e276d8c8-0dcf-4258-b465-0d1c21a4de48" testName="CreateProductTest" computerName="BLRADEBNA15041" duration="00:00:00.7752510" startTime="2012-06-21T20:36:59.2482401+05:30" endTime="2012-06-21T20:37:00.4322401+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c290c4b-e087-4efc-a628-2f4052bf332c">
+    </UnitTestResult>
+  </Results>
+</TestRun>

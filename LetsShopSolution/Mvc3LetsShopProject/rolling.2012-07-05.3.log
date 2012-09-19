@@ -1,0 +1,126 @@
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/5/2012 7:42:51 AM
+
+Message: HandlingInstanceID: 6c0cf496-058e-4754-ae58-2696a83a8d9f
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+07/05/2012 13:12:51
+Type : System.Data.SqlClient.SqlException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Cannot insert the value NULL into column 'EmailId', table 'LetsShop.dbo.UserDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 17
+Number : 515
+Procedure : SignUp
+Server : BLRADEBNA15041\SQLEXPRESS
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 443
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 714
+   at DataClassLibrary.DataProvider.Registration(UserSignUp usersignup) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\DataClassLibrary\DataProvider.cs:line 34
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/5/2012 7:42:51 AM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-5-129859476387425018
+ThreadIdentity : 
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-5-129859476387425018
+
+ProcessId: 6320
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:1084
+
+
+------------------------------------------
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/5/2012 7:45:39 AM
+
+Message: HandlingInstanceID: 0c6f86dd-665a-4584-9427-4259504478d9
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+07/05/2012 13:15:39
+Type : System.Data.SqlClient.SqlException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Cannot insert the value NULL into column 'Password', table 'LetsShop.dbo.UserDetails'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 17
+Number : 515
+Procedure : SignUp
+Server : BLRADEBNA15041\SQLEXPRESS
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 443
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 714
+   at DataClassLibrary.DataProvider.Registration(UserSignUp usersignup) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\DataClassLibrary\DataProvider.cs:line 34
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/5/2012 7:45:39 AM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-5-129859476387425018
+ThreadIdentity : 
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-5-129859476387425018
+
+ProcessId: 6320
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:4000
+
+
+------------------------------------------

@@ -1,0 +1,215 @@
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/5/2012 8:56:36 PM
+
+Message: HandlingInstanceID: 9e1d9f59-b5a3-48c0-9385-1bab16fd5991
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+07/05/2012 20:56:36
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Mvc3LetsShopProject
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Web.Mvc.ActionResult CreateProduct(DataClassLibrary.Models.ProductCategoryRelation, System.Web.HttpPostedFileBase)
+Stack Trace :    at Mvc3LetsShopProject.Controllers.ProductController.CreateProduct(ProductCategoryRelation pcr, HttpPostedFileBase file) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\Controllers\ProductController.cs:line 204
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/5/2012 3:26:36 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-11-129859755029605611
+ThreadIdentity : abd
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-11-129859755029605611
+
+ProcessId: 4548
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:6436
+
+
+------------------------------------------
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/5/2012 8:57:03 PM
+
+Message: HandlingInstanceID: e165dbf6-acca-459b-a7e6-f832741ecca6
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+07/05/2012 20:57:03
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Mvc3LetsShopProject
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Web.Mvc.ActionResult CreateProduct(DataClassLibrary.Models.ProductCategoryRelation, System.Web.HttpPostedFileBase)
+Stack Trace :    at Mvc3LetsShopProject.Controllers.ProductController.CreateProduct(ProductCategoryRelation pcr, HttpPostedFileBase file) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\Controllers\ProductController.cs:line 204
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/5/2012 3:27:03 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-11-129859755029605611
+ThreadIdentity : abd
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-11-129859755029605611
+
+ProcessId: 4548
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:4068
+
+
+------------------------------------------
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/5/2012 8:57:31 PM
+
+Message: HandlingInstanceID: 6363ef30-98d0-4d73-aaa7-5ccd59cb3b19
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+07/05/2012 20:57:31
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Mvc3LetsShopProject
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Web.Mvc.ActionResult CreateProduct(DataClassLibrary.Models.ProductCategoryRelation, System.Web.HttpPostedFileBase)
+Stack Trace :    at Mvc3LetsShopProject.Controllers.ProductController.CreateProduct(ProductCategoryRelation pcr, HttpPostedFileBase file) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\Controllers\ProductController.cs:line 204
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/5/2012 3:27:31 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-11-129859755029605611
+ThreadIdentity : abd
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-11-129859755029605611
+
+ProcessId: 4548
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:6784
+
+
+------------------------------------------
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/5/2012 9:01:10 PM
+
+Message: HandlingInstanceID: cd5d3c58-7615-4925-9cfc-7c22c4e1d9ed
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+07/05/2012 21:01:10
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Mvc3LetsShopProject
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Web.Mvc.ActionResult CreateProduct(DataClassLibrary.Models.ProductCategoryRelation, System.Web.HttpPostedFileBase)
+Stack Trace :    at Mvc3LetsShopProject.Controllers.ProductController.CreateProduct(ProductCategoryRelation pcr, HttpPostedFileBase file) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\Controllers\ProductController.cs:line 204
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/5/2012 3:31:10 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-1-129859757544437872
+ThreadIdentity : abd
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-1-129859757544437872
+
+ProcessId: 6336
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:4092
+
+
+------------------------------------------
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/5/2012 9:02:18 PM
+
+Message: HandlingInstanceID: d9462377-f9bb-446c-ad3b-25ae6a4292a3
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+07/05/2012 21:02:18
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Mvc3LetsShopProject
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Web.Mvc.ActionResult CreateProduct(DataClassLibrary.Models.ProductCategoryRelation, System.Web.HttpPostedFileBase)
+Stack Trace :    at Mvc3LetsShopProject.Controllers.ProductController.CreateProduct(ProductCategoryRelation pcr, HttpPostedFileBase file) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\Controllers\ProductController.cs:line 204
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/5/2012 3:32:18 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-1-129859757544437872
+ThreadIdentity : abd
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-1-129859757544437872
+
+ProcessId: 6336
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:912
+
+
+------------------------------------------

@@ -1,0 +1,49 @@
+﻿@model DataClassLibrary.Models.ProductCategoryRelation
+
+@{
+    ViewBag.Title = "Delete";
+}
+<h2>DeleteProduct</h2>
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Contact</legend>
+
+    <div>
+        <img src="@Url.Content(Model.product.Picture)" alt="no Image" height="140px"/>
+        @Html.HiddenFor(model => model.product.Picture)
+    </div>
+    <div class="display-label">
+        Product Name : <b>@Html.DisplayFor(model => model.product.ProductName)</b>
+    </div>
+    <div class="display-label">
+        Product Description : <b>@Html.DisplayFor(model => model.product.ProductDescription)</b>
+    </div>
+    <div class="display-label">
+        Category Name : <b>@Html.DisplayFor(model => model.categories.CategoryName)</b>
+    </div>
+    <div class="display-label">
+        SubCategory Name : <b>@Html.DisplayFor(model => model.categories.SubCategoryName)</b>
+    </div>
+    <div class="display-label">
+        Price : <b>@Html.DisplayFor(model => model.product.Price)</b>
+    </div>
+    <div class="display-label">
+        UnitsInStock : <b>@Html.DisplayFor(model => model.product.UnitsInStock)</b>
+    </div>
+    <div class="display-label">
+        StockAvailability : <b>@Html.DisplayFor(model => model.product.StockAvailability)</b>
+    </div>
+    <div class="display-label">
+        Colour : <b>@Html.DisplayFor(model => model.product.Colour)</b>
+    </div>
+    <div class="display-label">
+        Size : <b>@Html.DisplayFor(model => model.product.Size)</b>
+    </div>
+</fieldset>
+
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

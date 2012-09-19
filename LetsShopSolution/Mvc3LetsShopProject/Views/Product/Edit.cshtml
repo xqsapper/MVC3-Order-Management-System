@@ -1,0 +1,105 @@
+﻿@model DataClassLibrary.Models.ProductCategoryRelation
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>EditProduct</h2>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Contact</legend>
+
+        @Html.HiddenFor(model => model.product.ProductId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product.ProductName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.product.ProductName)
+            @Html.ValidationMessageFor(model => model.product.ProductName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product.ProductDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.product.ProductDescription)
+            @Html.ValidationMessageFor(model => model.product.ProductDescription)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.categories.CategoryName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.categories.CategoryName)
+            @Html.ValidationMessageFor(model => model.categories.CategoryName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.categories.SubCategoryName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.categories.SubCategoryName)
+            @Html.ValidationMessageFor(model => model.categories.SubCategoryName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product.Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.product.Price)
+            @Html.ValidationMessageFor(model => model.product.Price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product.UnitsInStock)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.product.UnitsInStock)
+            @Html.ValidationMessageFor(model => model.product.UnitsInStock)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product.StockAvailability)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.product.StockAvailability)
+            @Html.ValidationMessageFor(model => model.product.StockAvailability)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product.Colour)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.product.Colour)
+            @Html.ValidationMessageFor(model => model.product.Colour)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product.Size)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.product.Size)
+            @Html.ValidationMessageFor(model => model.product.Size)
+        </div>
+
+       <div class="editor-field">
+             <input type="file" name="file" />
+        </div>
+        <div>
+            <img src="@Url.Content(Model.product.Picture)" alt="no Image"  width="100px" height="100px"/>
+            @Html.HiddenFor(model => model.product.Picture)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

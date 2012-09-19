@@ -1,0 +1,38 @@
+﻿@model IEnumerable<DataClassLibrary.Models.Product>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<p>
+    @if (HttpContext.Current.Session["usertype"] != null)
+    {
+        if (HttpContext.Current.Session["usertype"].ToString() == "Admin")
+        {
+            @Html.ActionLink("Create New", "Create")
+        }
+    }
+</p>
+
+<div id="CatPro">
+    @foreach (var item in Model)
+    {
+        var x = "http://localhost:49741/product/details/" + item.ProductId;
+        <div class="Product1">
+            <a class="ImageCl" href="@x">
+                <img src="@Html.DisplayFor(modelItem => item.Picture)" width="90px" alt="click to view details" />
+            </a>
+            <div class="prodTitle">
+                @Html.ActionLink(item.ProductName, "details", new { id = item.ProductId })
+            </div>
+            <div>
+                <label>Price : </label>
+                <label style="font-weight:bold">$ @Html.DisplayFor(modelItem => item.Price)</label>
+            </div>
+
+        </div>
+    }
+</div>
+

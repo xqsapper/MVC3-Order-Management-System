@@ -1,0 +1,188 @@
+﻿@model DataClassLibrary.Models.CartAndAllProducts
+
+@if (HttpContext.Current.Session["usertype"] != null)
+{
+    <div style="float: right">
+        <br />
+        <a href="http://localhost:49741/Product/Cart" style="text-decoration: none;">
+            <img src="@Url.Content("~/Images/defaultcart.jpg")" alt="My Cart" width="80px" height="60px" /><br />
+            View My Cart </a>
+    </div>
+}
+
+@{
+    ViewBag.Title = "All products";
+
+}
+
+<script type="text/javascript" src="../../Scripts/smartpaginator.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#TablePagerDiv').smartpaginator({ totalrecords: $("#allproductstable Tr").length-1, recordsperpage: 10,length:3, datacontainer: 'allproductstable', dataelement: 'tr', initval: 0, next: 'Next', prev: 'Prev', first: 'First', last: 'Last', theme: 'black', controlsalways: true });
+
+    });
+    function emptymybasket() {
+        $.ajax({
+            type: 'GET',
+            url: "/product/emptycart/@User.Identity.Name",
+            success: function (result) {
+                location.reload(true);
+            },
+            Error: function () { alert("failure"); }
+        });
+    }
+
+</script>
+
+<h2>All products</h2>
+
+@if (HttpContext.Current.Session["usertype"] != null)
+{
+    if (HttpContext.Current.Session["usertype"].ToString() == "Admin")
+    {
+    <p>@Html.ActionLink("Create New", "CreateProduct", "Product")</p>
+    }
+}
+
+<p>
+    @using (Html.BeginForm())
+    {
+        <p>
+            ProductName:@Html.TextBox("ProductName")
+            <input type="submit" value="Search" />
+        </p>
+    }
+</p>
+
+<table id="productindex" class="productindex" style="border: 0px;">
+    <tr class="productindex">
+        <td style="width: 70%; vertical-align: top;" class="productindex">
+            <br />
+            <br />
+            <table id="allproductstable" style ="width:95%">
+                <tr>
+                    <th>
+                        Picture
+                    </th>
+                    <th>
+                        ProductName
+                    </th>
+                    <th>
+                        ProductDescription
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Size
+                    </th>
+                </tr>
+                @{
+                    var proinfo = ViewBag.Message as List<int>;
+                    foreach (var item in Model.productlist)
+                    {
+                    <tr>
+                        <td>
+                            <img src="@Url.Content(item.Picture)" alt="" style="width: 30px; height: 30px" />
+                        </td>
+                        <td>
+                            @Html.ActionLink(item.ProductName, "Details", new { id = item.ProductId })
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Size)
+                        </td>
+                        @if (HttpContext.Current.Session["usertype"] != null)
+                        {
+                            <td>
+                                <a href="@Url.Action("AddToCart", new { id = item.ProductId })">
+                                    <img src="@Url.Content("~/Images/addtocart.jpg")" alt="AddToCart" width="50px" height="35px" />
+                                </a>
+                            </td>
+                
+                            if (HttpContext.Current.Session["usertype"].ToString() == "Admin")
+                            {
+                            <td>@Html.ActionLink("Edit", "Edit", new { id = item.ProductId })
+                            </td>
+                            }
+
+                            for (int i = 0; i < proinfo.Count; i++)
+                            {
+                                if (item.ProductId == proinfo[i])
+                                {
+                            <td>
+                                <a>
+                                    <img src="@Url.Content("~/Images/correct.png")" alt="AddedtoCart" width="30px" height="30px" />
+                                </a>
+                            </td>
+                                    break;
+                                }
+                            }
+                        }
+                    </tr>
+                    }
+                }
+            </table>
+            <div id="TablePagerDiv" style="width:94%"></div>
+        </td>
+        @if (HttpContext.Current.Session["usertype"] != null)
+        {
+            if (Model.cartlist.Count > 0)
+            {
+                <td style="vertical-align: top;" class="productindex">
+                <br />
+                <br />
+                <div style="border: 1px solid rgb(209,209,209); padding: 4px 8px 4px 8px; background-color: rgb(251,251,251); box-shadow: 10px 10px 5px #888888;">
+                    <div style="background-color: /*#F1F1F1;*/ rgb(204,204,204);">
+                            <b> &nbsp;Cart Items : </b>
+                            <span style="float:right">
+                                <a style="cursor: pointer; text-decoration: underline; color: Green;" onmouseover="color: Red" onclick="emptymybasket()">Empty Basket</a>
+                            </span>
+                            <br />
+                    </div>
+                    <br />
+
+                    @foreach (var item in Model.cartlist)
+                    {
+                        
+                        <div style="background-color: rgb(234,242,211);">
+                            <b> &nbsp;Product -</b><br />
+                        </div>
+                        <div>
+                            &nbsp;Name : <b>@Html.DisplayFor(modelItem => item.Product.ProductName)</b><br />
+                        </div>
+                        <div>
+                            &nbsp;Price : <b>@Html.DisplayFor(modelItem => item.Product.Price)</b><br />
+                        </div>
+                        <div>
+                            &nbsp;Quantity : <b>@Html.DisplayFor(modelItem => item.Cart.Quantity)</b>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <a href="@Url.Action("RemoveFromFrontCart", "Product", new { id = item.Product.ProductId })">
+                                <img src="@Url.Content("~/Images/removefromcart.jpg")" alt="RemoveFromCart" width="35px" height="28px" />
+                            </a>&nbsp;
+                            <a href="@Url.Action("IncrementQuantityFront", "Product", new { id = item.Product.ProductId })">
+                                <img src="@Url.Content("~/Images/plusgreen.jpg")" alt="Quantity++" width="28px" height="28px" />
+                            </a>&nbsp;
+                            <a href="@Url.Action("DecrementQuantityFront", "Product", new { id = item.Product.ProductId })">
+                                <img src="@Url.Content("~/Images/minusred.png")" alt="Quantity--" width="28px" height="28px" />
+                            </a>
+                            <br />
+                            <br />
+                        </div>
+                    }
+                    @Html.ActionLink("Proceed to buy", "Cart", "Product")
+                </div>
+                </td>
+            }
+        }
+    </tr>
+</table>
+

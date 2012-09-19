@@ -1,0 +1,59 @@
+﻿@model DataClassLibrary.Models.OrderInformation
+@{
+    ViewBag.Title = "OrderDetails";
+}
+<h2>OrderDetails</h2>
+
+<fieldset>
+    <legend style="background-color:#F1F1F1;"> Order Information </legend>
+    <table id="orderDetailsTable" style="width: 100%;">
+        <tr>
+            <td id="col1">
+                <div class="display-label">
+                    Order Id : <b>@Html.DisplayFor(model => model.orderuser.OrderId)</b>
+                </div>
+                <div class="display-label">
+                    Order Date : <b>@Html.DisplayFor(model => model.orderuser.OrderDate)</b>
+                </div>
+                <div class="display-label">
+                    Shipping Date : <b>@Html.DisplayFor(model => model.orderuser.ShippingDate)</b>
+                </div>
+                <div class="display-label">
+                    Transaction Status : <b>@Html.DisplayFor(model => model.orderuser.TransactionStatus)</b>
+                </div>
+                <div class="display-label">
+                    Payment Date : <b>@Html.DisplayFor(model => model.orderuser.PaymentDate)</b>
+                </div>
+                <div class="display-label">
+                    Total Amount : <b>@Html.DisplayFor(model => model.orderuser.TotalAmount)</b>
+                </div>
+                <div class="display-label">
+                    Billing Address : <b>@Html.DisplayFor(model => model.orderuser.BillingAddress)</b>
+                </div>
+                <div class="display-label">
+                    Shipping Address : <b>@Html.DisplayFor(model => model.orderuser.ShippingAddress)</b>
+                </div>
+                <div class="display-label">
+                    Phone Number : <b>@Html.DisplayFor(model => model.orderuser.PhoneNumber)</b>
+                </div>
+                <div class="display-label">
+                    Email Id : <b>@Html.DisplayFor(model => model.orderuser.EmailId)</b>
+                </div>
+            </td>
+            <td id="col2">
+                @foreach (var item in Model.orderproduct)
+                {
+                    <div style="background-color:#F1F1F1;"><b>Product -</b><br /></div>
+                    <div>Name : <b>@Html.DisplayFor(modelItem => item.product.ProductName)</b><br /></div>
+                    <div>Price : <b>@Html.DisplayFor(modelItem => item.product.Price)</b><br /></div>
+                    <div>Quantity : <b>@Html.DisplayFor(modelItem => item.quantity)</b><br /><br /></div>
+                }
+            </td>
+        </tr>
+    </table>
+</fieldset>
+
+<p>
+    @Html.ActionLink("My Account details", "Index", "MyAccount") |
+    @Html.ActionLink("View All Orders", "MyOrders", "MyAccount")
+</p>

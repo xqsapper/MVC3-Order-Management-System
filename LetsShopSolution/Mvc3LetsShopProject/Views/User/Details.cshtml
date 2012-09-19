@@ -1,0 +1,67 @@
+﻿@model DataClassLibrary.Models.UserData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>UserData</legend>
+
+    <div class="display-label">
+        CustomerId : <b>@Html.DisplayFor(model => model.CustomerId)</b>
+    </div>
+
+    <div class="display-label">
+        UserId : <b>@Html.DisplayFor(model => model.UserId)</b>
+    </div>
+
+    <div class="display-label">
+        FirstName : <b>@Html.DisplayFor(model => model.FirstName)</b>
+    </div>
+
+    <div class="display-label">
+        LastName : <b>@Html.DisplayFor(model => model.LastName)</b>
+    </div>
+
+    <div class="display-label">
+        EmailId : <b>@Html.DisplayFor(model => model.EmailId)</b>
+    </div>
+
+    <div class="display-label">
+        Password : <b>@Html.DisplayFor(model => model.Password)</b>
+    </div>
+
+    <div class="display-label">
+        BillingAddress : <b>@Html.DisplayFor(model => model.BillingAddress)</b>
+    </div>
+
+    <div class="display-label">
+        ShippingAddress : <b>@Html.DisplayFor(model => model.ShippingAddress)</b>
+    </div>
+
+    <div class="display-label">
+        CardNumber : <b>@Html.DisplayFor(model => model.CardNumber)</b>
+    </div>
+
+    <div class="display-label">
+        CardType : <b>@Html.DisplayFor(model => model.CardType)</b>
+    </div>
+
+    <div class="display-label">
+        CardExpiryDate : @if(Model.CardExpiryDate.Date == new DateTime(01/01/0001).Date){
+                             <b>--</b>}
+                         else{
+                            <b>@Html.DisplayFor(model => model.CardExpiryDate)</b>
+                         }
+    </div>
+
+    <div class="display-label">
+        PhoneNumber : <b>@Html.DisplayFor(model => model.PhoneNumber)</b>
+    </div>
+        
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

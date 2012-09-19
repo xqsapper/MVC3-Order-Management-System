@@ -1,0 +1,22 @@
+﻿@model DataClassLibrary.Models.UserData
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<h2>SignUp Status : </h2>
+
+@if (ViewBag.SignUpMessage == "Your account is created successfully!")
+{
+    <p style="color: Green; font: italic bold 24px Georgia Serif;">
+        Congratulations! Your account has been successfully created.
+    </p>
+}
+else
+{
+    <p style="color: Red; font: italic bold 24px Georgia Serif;">@ViewBag.SignUpMessage</p>
+}
+
+<div>
+    @Html.ActionLink("Back to home", "Index", "Home")
+</div>

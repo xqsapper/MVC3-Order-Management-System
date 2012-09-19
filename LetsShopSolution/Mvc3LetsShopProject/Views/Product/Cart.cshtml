@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DataClassLibrary.Models.AddToCartModel>
+@{
+    ViewBag.Title = "Cart";
+}
+
+
+@if(Model.Count() != 0){
+    <h2>Confirm Cart Items - </h2>
+    
+    <table>
+    <tr>
+        <th>
+            ProductName
+        </th>
+        <th>
+            ProductDescription
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+                <a href="@Url.Action("EmptyCart", "Product", new { id = @User.Identity.Name })">
+                    <img src="@Url.Content("~/Images/clearcart.png")" alt="EmptyCart" width="50px" height="35px" />
+                </a>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.HiddenFor(modelItem => item.Product.ProductId)
+                @Html.DisplayFor(modelItem => item.Product.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cart.Quantity)
+            </td>
+            <td>
+                <a href="@Url.Action("RemoveFromCart", new { id = item.Product.ProductId })">
+                    <img src="@Url.Content("~/Images/removefromcart.jpg")" alt="RemoveFromCart" width="50px" height="35px" />
+                </a>
+            </td>
+            <td>
+                <a href="@Url.Action("IncrementQuantity", new { id = item.Product.ProductId })">
+                    <img src="@Url.Content("~/Images/plusgreen.jpg")" alt="Add quantity by one" width="30px" height="30px" />
+                </a>
+            </td>
+            <td>
+                <a href="@Url.Action("DecrementQuantity", new { id = item.Product.ProductId })">
+                    <img src="@Url.Content("~/Images/minusred.png")" alt="Reduce quantity by one" width="30px" height="30px" />
+                </a>
+            </td>
+        </tr>
+    }
+    </table>
+
+    <br />
+    @Html.ActionLink("Buy cart items now", "CheckOut")<span> | </span>
+    @Html.ActionLink("Go to home", "Index", "Home")<span> | </span>
+    @Html.ActionLink("Search other products", "Index", "Product")
+    <br />
+}
+else
+{
+    <h2> Oops! </h2>
+    <p style="color: Red; font: italic bold 24px Georgia Serif;">You do not have any items in your cart!</p><br />
+    @Html.ActionLink("Browse products now", "Index", "Product")
+}

@@ -1,0 +1,181 @@
+﻿@model IEnumerable<DataClassLibrary.Models.Product>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Welcome to Let's Shop!</h2>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        jQuery("#BooksCarousel").jcarousel({
+            easing: 'BounceEaseOut',
+            animation: 1000
+        });
+
+        jQuery("#MobilesCarousel").jcarousel({
+            easing: 'BounceEaseOut',
+            animation: 1000
+        });
+
+        jQuery("#ComputersCarousel").jcarousel({
+            easing: 'BounceEaseOut',
+            animation: 1000
+        });
+
+        jQuery("#CamerasCarousel").jcarousel({
+            easing: 'BounceEaseOut',
+            animation: 1000
+        });
+
+        jQuery("#VideoPlayersCarousel").jcarousel({
+            easing: 'BounceEaseOut',
+            animation: 1000
+        });
+
+        jQuery.easing['BounceEaseOut'] = function (p, t, b, c, d) {
+            if ((t /= d) < (1 / 2.75)) {
+                return c * (7.5625 * t * t) + b;
+            } else if (t < (2 / 2.75)) {
+                return c * (7.5625 * (t -= (1.5 / 2.75)) * t + .75) + b;
+            } else if (t < (2.5 / 2.75)) {
+                return c * (7.5625 * (t -= (2.25 / 2.75)) * t + .9375) + b;
+            } else {
+                return c * (7.5625 * (t -= (2.625 / 2.75)) * t + .984375) + b;
+            }
+        };
+    })
+
+</script>
+
+<div class="RightDataSec" style="width: 100%" >
+    <div style='padding: 20px 0px 10px 0px; width:100%'><a href="http://localhost:49741/product/browse?category=Books" class='CategoryHeader' style="border-bottom:2px solid rgb(218, 124, 12); display:block; width:95%; text-decoration: none;"><span class='CommonHeader-H2'> Books</span> </a></div>
+    <ul id='BooksCarousel' class='jcarousel-skin-tango'>
+
+        @foreach (var item in Model)
+        {
+            if (item.CategoryId == 1)
+            {
+                var x = "http://localhost:49741/product/details/" + item.ProductId;
+                <li>
+                <div class="Product2">
+                    <a class="ImageCl" href="@x">
+                        <img src="@Html.DisplayFor(modelItem => item.Picture)" height="120px" alt="click to view details" />
+                    </a>
+                    <div class="prodTitle">
+                        @Html.ActionLink(item.ProductName, "details", "Product", new { id = item.ProductId }, null)
+                    </div>
+                    <div>
+                        <label>Price : </label>
+                        <label style="font-weight:bold">Rs. @Html.DisplayFor(modelItem => item.Price)</label>
+                    </div>
+                </div>
+                </li>
+            }
+        }
+    </ul>
+
+    <div style='padding: 20px 0px 10px 0px; width:100%'><a href="http://localhost:49741/product/browse?category=Mobiles" class='CategoryHeader' style="border-bottom:2px solid rgb(218, 124, 12); display:block; width:95%; text-decoration: none;"><span class='CommonHeader-H2'> Mobiles</span> </a></div>
+    <ul id='MobilesCarousel' class='jcarousel-skin-tango'>
+
+        @foreach (var item in Model)
+        {
+            if (item.CategoryId == 2)
+            {
+                var x = "http://localhost:49741/product/details/" + item.ProductId;
+                <li>
+                <div class="Product2">
+                    <a class="ImageCl" href="@x">
+                        <img src="@Html.DisplayFor(modelItem => item.Picture)" height="120px" alt="click to view details" />
+                    </a>
+                    <div class="prodTitle">
+                        @Html.ActionLink(item.ProductName, "details", "Product", new { id = item.ProductId }, null)
+                    </div>
+                    <div>
+                        <label>Price : </label>
+                        <label style="font-weight:bold">Rs. @Html.DisplayFor(modelItem => item.Price)</label>
+                    </div>
+                </div>
+                </li>
+            }
+        }
+    </ul>
+
+    <div style='padding: 20px 0px 10px 0px; width:100%'><a href="http://localhost:49741/product/browse?category=Computers" class='CategoryHeader' style="border-bottom:2px solid rgb(218, 124, 12); display:block; width:95%; text-decoration: none;"><span class='CommonHeader-H2'> Computers</span> </a></div>
+    <ul id='ComputersCarousel' class='jcarousel-skin-tango'>
+
+        @foreach (var item in Model)
+        {
+            if (item.CategoryId == 3)
+            {
+                var x = "http://localhost:49741/product/details/" + item.ProductId;
+                <li>
+                <div class="Product2">
+                    <a class="ImageCl" href="@x">
+                        <img src="@Html.DisplayFor(modelItem => item.Picture)" height="120px" alt="click to view details" />
+                    </a>
+                    <div class="prodTitle">
+                        @Html.ActionLink(item.ProductName, "details", "Product", new { id = item.ProductId }, null)
+                    </div>
+                    <div>
+                        <label>Price : </label>
+                        <label style="font-weight:bold">Rs. @Html.DisplayFor(modelItem => item.Price)</label>
+                    </div>
+                </div>
+                </li>
+            }
+        }
+    </ul>
+
+    <div style='padding: 20px 0px 10px 0px; width:100%'><a href="http://localhost:49741/product/browse?category=Cameras" class='CategoryHeader' style="border-bottom:2px solid rgb(218, 124, 12); display:block; width:95%; text-decoration: none;"><span class='CommonHeader-H2'> Cameras</span> </a></div>
+    <ul id='CamerasCarousel' class='jcarousel-skin-tango'>
+
+        @foreach (var item in Model)
+        {
+            if (item.CategoryId == 4)
+            {
+                var x = "http://localhost:49741/product/details/" + item.ProductId;
+                <li>
+                <div class="Product2">
+                    <a class="ImageCl" href="@x">
+                        <img src="@Html.DisplayFor(modelItem => item.Picture)" height="120px" alt="click to view details" />
+                    </a>
+                    <div class="prodTitle">
+                        @Html.ActionLink(item.ProductName, "details", "Product", new { id = item.ProductId }, null)
+                    </div>
+                    <div>
+                        <label>Price : </label>
+                        <label style="font-weight:bold">Rs. @Html.DisplayFor(modelItem => item.Price)</label>
+                    </div>
+                </div>
+                </li>
+            }
+        }
+    </ul>
+
+    <div style='padding: 20px 0px 10px 0px; width:100%'><a href="http://localhost:49741/product/browse?category=VideoPlayers" class='CategoryHeader' style="border-bottom:2px solid rgb(218, 124, 12); display:block; width:95%; text-decoration: none;"><span class='CommonHeader-H2'> VideoPlayers</span> </a></div>
+    <ul id='VideoPlayersCarousel' class='jcarousel-skin-tango'>
+
+        @foreach (var item in Model)
+        {
+            if (item.CategoryId == 5)
+            {
+                var x = "http://localhost:49741/product/details/" + item.ProductId;
+                <li>
+                <div class="Product2">
+                    <a class="ImageCl" href="@x">
+                        <img src="@Html.DisplayFor(modelItem => item.Picture)" height="120px" alt="click to view details" />
+                    </a>
+                    <div class="prodTitle">
+                        @Html.ActionLink(item.ProductName, "details", "Product", new { id = item.ProductId }, null)
+                    </div>
+                    <div>
+                        <label>Price : </label>
+                        <label style="font-weight:bold">Rs. @Html.DisplayFor(modelItem => item.Price)</label>
+                    </div>
+                </div>
+                </li>
+            }
+        }
+    </ul>
+</div>

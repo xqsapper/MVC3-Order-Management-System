@@ -1,0 +1,33 @@
+﻿@model DataClassLibrary.Models.UserData
+
+@{
+    ViewBag.Title = "SecurityQuestion";
+}
+
+<h2>SecurityQuestion</h2>
+
+<p style="color: Red">@ViewBag.message</p>
+ @using (Html.BeginForm()) {
+ <div class="display-label">UserName</div>
+    <div class="display-field">
+     @Html.DisplayFor(model => model.UserId)
+     @Html.HiddenFor(model => model.UserId)
+    </div>
+
+    <div class="display-label">Security Question</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecurityQuestion)
+        
+    </div>
+
+    <div class="display-label">Security Answer</div>
+    <div class="display-field">
+        @Html.EditorFor(model => model.SecurityAnswer)
+    </div>
+   
+    <p>
+        <input type="submit" value="Login" />
+    </p>
+     
+     <p><b>Note : </b><a style="color: Green">Once you login, you can view and change your password (if required) from the "MyAccount" section.</a></p>
+}

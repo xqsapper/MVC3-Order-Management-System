@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DataClassLibrary.Models.Product>
+@{
+    ViewBag.Title = "Browse";
+}
+<script type="text/javascript" src="../../Scripts/jquery.jcarousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../Content/skin-tango.css" />
+
+<h2>Browse</h2>
+
+<p>
+    @using (Html.BeginForm())
+    {
+        <p>Min Price:@Html.TextBox("Min")  Max Price:@Html.TextBox("Max")  <input type="submit" value="Filter by price" /></p>
+    }
+</p>
+
+<div id="CatPro">
+    @foreach (var item in Model)
+    {
+        var x = "http://localhost:49741/product/details/" + item.ProductId;
+        <div class="Product1">
+            <a class="ImageCl" href="@x">
+                <img src="@Html.DisplayFor(modelItem => item.Picture)" width="90px" alt="click to view details" />
+            </a>
+            <div class="prodTitle">
+                @Html.ActionLink(item.ProductName, "details", new { id = item.ProductId })
+            </div>
+            <div>
+                <label>Price : </label>
+                <label style="font-weight:bold">$ @Html.DisplayFor(modelItem => item.Price)</label>
+            </div>
+
+        </div>
+    }
+</div>

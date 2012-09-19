@@ -1,0 +1,100 @@
+﻿@model IEnumerable<DataClassLibrary.Models.Orders>
+           
+@{
+    ViewBag.Title = "MyOrders";
+}
+
+<h2>MyOrders</h2>
+
+<p>
+    @Html.ActionLink("Export to Excel", "ExportMyOrders") | 
+    @Html.ActionLink("Go Back", "Index", "MyAccount")
+</p>
+
+<script type="text/javascript">
+    $('#cto').click(alert('ctor'));
+
+    function CancelThisOrder(orderid, userid) {
+        alert('123');
+        var hid = $(#hiddenorderid).val();
+        alert()
+        var answer = confirm('Are you sure you want to cancel this order?');
+        if (answer) {
+            
+            var dataString = 'OrderId=' + orderid + '&UserId=' + userid;
+            $.ajax({
+                type: 'GET',
+                url: "/myaccount/cancelorder/" + orderid,
+
+                data: dataString,
+                success: function (message) {
+                    alert(message);
+                    window.location.reload();
+                },
+                error: function () {
+                    alert(message);
+                }
+            });
+        }
+    }
+</script>
+
+<div class="AllOrders">
+    <table>
+        <tr>
+            <th>
+                Order Id
+            </th>
+            <th>
+                User Id
+            </th>
+            <th>
+                Order Date
+            </th>
+            <th>
+                Transaction Status
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Email Id
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.ActionLink(item.OrderId.ToString(), "OrderDetails", "MyAccount", new { id = item.OrderId }, new { @style = "color: #666666; font-weight: normal; text-decoration: none;" })                
+                @Html.HiddenFor(modelItem => item.OrderId, new { id = "hiddenorderid" })
+            </td>
+            <td>
+                @Html.ActionLink(item.UserId, "OrderDetails", "MyAccount", new { id = item.OrderId }, new { @style = "color: #666666; font-weight: normal; text-decoration: none;" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailId)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "OrderDetails", new { id = item.OrderId }) 
+                @if(item.TransactionStatus != "Shipped"){
+                   <span> | </span>@Html.ActionLink("Cancel Order", "CancelOrder", new { id = item.OrderId })
+                }
+            </td>
+        </tr>
+    }
+    
+    </table>
+    <div><br /></div>
+    @Html.ActionLink("Back to Account Details", "Index", "MyAccount")
+
+</div>

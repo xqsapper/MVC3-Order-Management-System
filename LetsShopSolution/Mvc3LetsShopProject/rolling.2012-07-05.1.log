@@ -1,0 +1,43 @@
+NEW EXCEPTION OF LETSSHOP
+Timestamp: 7/4/2012 5:55:40 AM
+
+Message: HandlingInstanceID: 2dee41c6-da7c-4ec9-9a3c-7e00b45bd299
+An exception of type 'System.NullReferenceException' occurred and was caught.
+-----------------------------------------------------------------------------
+07/04/2012 11:25:40
+Type : System.NullReferenceException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Object reference not set to an instance of an object.
+Source : Mvc3LetsShopProject
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Web.Mvc.ActionResult Edit(DataClassLibrary.Models.Product, Int32, System.Web.HttpPostedFileBase)
+Stack Trace :    at Mvc3LetsShopProject.Controllers.ProductController.Edit(Product product, Int32 id, HttpPostedFileBase file) in C:\Users\adebna\Documents\Visual Studio 2010\Projects\LetsShopSolution\Mvc3LetsShopProject\Controllers\ProductController.cs:line 243
+
+Additional Info:
+
+MachineName : BLRADEBNA15041
+TimeStamp : 7/4/2012 5:55:40 AM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/11/ROOT-9-129858539293957026
+ThreadIdentity : abd
+WindowsIdentity : SAPIENT\adebna
+
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: BLRADEBNA15041
+
+App Domain: /LM/W3SVC/11/ROOT-9-129858539293957026
+
+ProcessId: 2060
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Win32 ThreadId:6052
+
+
+------------------------------------------
